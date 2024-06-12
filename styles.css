@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+:root {
+    --bg-color: #ffffffa7;
+    --text-color: black;
+}
+
+body.dark-mode {
+    --bg-color: #333; /* Daha açık bir siyah tonu */
+    --text-color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+#app {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative;
+    flex: 20;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#theme-toggle {
+    position: static;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 32px;
+    z-index: 1;
+}
+
+button {
+    margin-top: 50px;
+    padding: 25px 15px;
+    cursor: pointer;
+    display: block;
+    width: calc(100% - 40px);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+section {
+    margin-top: 20px;
+}
+
+.options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.options-container button {
+    flex: 1 1 calc(33.333% - 20px); /* Her satırda 3 buton */
+    margin: 10px;
+}
+
+.sounds-container button {
+    flex: 1 1 calc(33.333% - 20px); /* Her satırda 3 buton */
+    margin: 5px;
+    font-size: 12px; /* Yazı boyutunu küçült */
+    padding: 10px; /* Buton boyutunu küçült */
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
+.correct-answer {
+    color: green;
+}
+
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: auto;
+    box-sizing: border-box;
+    position: fixed; /* Fixed position */
+    bottom: 30px; /* Slight offset from the bottom */
+    right: 10px; /* Slight offset from the right */
+    background-color: rgba(0, 0, 0, 0.2); /* Slightly transparent background */
+    border-radius: 5px; /* Rounded corners */
+}
+
+body.dark-mode footer {
+    background-color: rgba(255, 255, 255, 0.2); /* Açık mod için hafif açık gri arka plan */
+    opacity: 0.7;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-logo {
+    width: 100px;
+    opacity: 0.7 ;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #ffffff; /* Açık gri */
+    margin-top: 5px;
+    text-align: center;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Sounds App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>    
+        <button id="theme-toggle">🌙</button>
+    </header>
+    <div id="app">
+        <section id="menu">
+            <button onclick="navigateTo('heart')">გულის აუსკულტაცია</button>
+            <button onclick="navigateTo('lungs')">ფილტვების აუსკულტაცია</button>
+        </section>
+        <section id="sub-menu" class="hidden">
+            <button onclick="navigateTo('sounds')">ხმები</button>
+            <button onclick="navigateTo('test')">ტესტი</button>
+            <button onclick="navigateBack()">უკან</button>
+        </section>
+        <section id="sounds" class="hidden">
+            <div id="sounds-list" class="sounds-container"></div>
+            <button onclick="navigateBack()">Back</button>
+        </section>
+        <section id="test" class="hidden">
+            <div id="options" class="options-container"></div>
+            <div id="result"></div>
+            <button onclick="navigateBack()">Back</button>
+        </section>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <img class="footer-logo" src="logo.png" alt="Logo">
+            <p class="footer-text">Made by Riboza</p>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
